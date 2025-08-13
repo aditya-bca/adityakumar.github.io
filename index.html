@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aditya Kumar — Portfolio</title>
+  <meta name="description" content="Aditya Kumar | Android & Web Developer Portfolio">
+  <style>
+    :root{
+      --bg:#0f172a; --card:#111827; --text:#e5e7eb; --muted:#94a3b8; --accent:#22d3ee; --chip:#1f2937;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial; background:linear-gradient(180deg,#0b1220,#0f172a);}
+    header{position:sticky; top:0; backdrop-filter:blur(8px); background:rgba(15,23,42,.6); border-bottom:1px solid rgba(255,255,255,.06); z-index:10}
+    nav{max-width:1100px; margin:auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between;}
+    nav a{color:var(--text); text-decoration:none; margin-left:16px; font-size:14px}
+    nav a:hover{color:var(--accent)}
+    .brand{color:var(--text); font-weight:700; letter-spacing:.5px}
+    .container{max-width:1100px; margin:auto; padding:32px 20px}
+    .hero{display:grid; grid-template-columns:1.2fr .8fr; gap:24px; align-items:center; padding:40px 0}
+    h1{color:#fff; font-size:40px; line-height:1.1; margin:0 0 12px}
+    p{color:var(--muted); margin:0 0 12px}
+    .cta{display:flex; gap:12px; margin-top:16px}
+    .btn{padding:12px 16px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:var(--card); color:var(--text); text-decoration:none; font-weight:600}
+    .btn.primary{background:var(--accent); color:#082f49; border:none}
+    .card{background:rgba(17,24,39,.7); border:1px solid rgba(255,255,255,.06); border-radius:18px; padding:20px}
+    .grid{display:grid; gap:16px}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px}
+    .chip{background:var(--chip); color:var(--text); border:1px solid rgba(255,255,255,.06); padding:8px 10px; border-radius:999px; font-size:12px}
+    .section-title{color:#fff; font-size:24px; margin:24px 0 12px}
+    .project{display:flex; flex-direction:column; gap:8px}
+    .project h3{color:#fff; margin:0}
+    .project a{color:var(--accent); text-decoration:none; font-size:14px}
+    footer{border-top:1px solid rgba(255,255,255,.06); margin-top:32px}
+    .small{font-size:13px; color:var(--muted)}
+    img{width:100%; height:auto; border-radius:14px; border:1px solid rgba(255,255,255,.06)}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      nav{flex-wrap:wrap; gap:8px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="brand">Aditya Kumar</div>
+      <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <div>
+        <h1>Android & Web Developer</h1>
+        <p>Building fast, clean apps and websites. Focus on Java, Kotlin, Android Studio, Firebase, HTML, CSS, JavaScript.</p>
+        <div class="cta">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="mailto:adityamaurya1875@gmail.com">Hire Me</a>
+        </div>
+        <div class="chips" style="margin-top:14px">
+          <span class="chip">Java</span><span class="chip">Kotlin</span><span class="chip">Android Studio</span>
+          <span class="chip">Firebase</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
+        </div>
+      </div>
+      <div>
+        <!-- Optional image: place a project or profile picture in /assets/me.jpg later -->
+        <img src="https://picsum.photos/800/500?blur=1" alt="Preview">
+      </div>
+    </section>
+
+    <section id="about" class="card">
+      <h2 class="section-title">About Me</h2>
+      <p>Hi, I'm Aditya — a BCA graduate passionate about solving real-world problems with clean UI and reliable code. I love shipping Android apps with Firebase backends and making responsive web pages.</p>
+    </section>
+
+    <section id="skills" class="card">
+      <h2 class="section-title">Skills</h2>
+      <div class="chips">
+        <span class="chip">Java</span><span class="chip">Kotlin</span><span class="chip">Android</span>
+        <span class="chip">Firebase Auth/Firestore</span><span class="chip">HTML</span>
+        <span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">Git & GitHub</span>
+      </div>
+    </section>
+
+    <section id="projects" class="card">
+      <h2 class="section-title">Projects</h2>
+      <div class="grid grid-2">
+        <div class="project">
+          <img src="https://picsum.photos/seed/parking/800/420" alt="Digital Parking App">
+          <h3>Digital Parking App</h3>
+          <p class="small">Android app for real-time slot tracking using Firebase (Auth + Firestore).</p>
+          <a href="https://github.com/your-username/digital-parking-app" target="_blank">GitHub Repo →</a>
+        </div>
+        <div class="project">
+          <img src="https://picsum.photos/seed/portfolio/800/420" alt="Portfolio Website">
+          <h3>Portfolio Website</h3>
+          <p class="small">This responsive portfolio, hosted on GitHub Pages.</p>
+          <a href="https://your-username.github.io/your-repo" target="_blank">Live Demo →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="card">
+      <h2 class="section-title">Education</h2>
+      <p class="small"><strong>BCA</strong> — Institute of Computer Science & Technology, Varanasi (2025)</p>
+      <p class="small">Certifications: Java Programming, Android Development, Internshala (as applicable)</p>
+    </section>
+
+    <section id="contact" class="card">
+      <h2 class="section-title">Contact</h2>
+      <p class="small">Email: <a href="mailto:adityamaurya1875@gmail.com">adityamaurya1875@gmail.com</a></p>
+      <p class="small">LinkedIn: <a href="https://www.linkedin.com/in/your-link" target="_blank">/in/your-link</a> · GitHub: <a href="https://github.com/your-username" target="_blank">@your-username</a></p>
+    </section>
+
+    <footer class="container">
+      <p class="small">© <span id="y"></span> Aditya Kumar. All rights reserved.</p>
+    </footer>
+  </main>
+
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
